@@ -84,6 +84,7 @@ public class Exercici1M9UF3 {
                 + "************************************************************************************************************");
         
 
+        //Mostrem el nom del host del nostre ordinador i la seva IP.
         InetAddress ip2;
         ip2 = InetAddress.getLocalHost();
         System.out.println("Nom del HOST: " + ip2.getHostName());
@@ -91,12 +92,13 @@ public class Exercici1M9UF3 {
         
         System.out.println();
         
+        //Mostrem la IP del domini www.formula1.com
         InetAddress ip3;
         ip3 = InetAddress.getByName("www.formula1.com");
         
         System.out.println("www.formula1.com: " + ip3.getHostAddress());
         
-        
+        //Mostrem les IP's de www.google.com
         InetAddress ip4 [];
         ip4 = InetAddress.getAllByName("www.google.com");
         
