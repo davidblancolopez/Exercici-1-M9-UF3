@@ -79,8 +79,26 @@ public class Exercici1M9UF3 {
         System.out.println("**************************************************************************************************"
                 + "************************************************************************************************************");
         
+
+        InetAddress ip2;
+        ip2 = InetAddress.getLocalHost();
+        System.out.println("Nom del HOST: " + ip2.getHostName());
+        System.out.println("Direcció IP: " + ip2.getHostAddress());
+        
+        System.out.println();
+        
+        InetAddress ip3;
+        ip3 = InetAddress.getByName("www.formula1.com");
+        
+        System.out.println("www.formula1.com: " + ip3.getHostAddress());
         
         
+        InetAddress ip4 [];
+        ip4 = InetAddress.getAllByName("www.google.com");
+        
+        for (int i = 0; i < ip4.length; i++) {
+            System.out.println(ip4[i].getHostAddress());
+        }
     }
     
 }
