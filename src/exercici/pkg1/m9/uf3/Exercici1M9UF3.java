@@ -100,6 +100,8 @@ public class Exercici1M9UF3 {
         InetAddress ip4 [];
         ip4 = InetAddress.getAllByName("www.google.com");
         
+        System.out.println();
+        
         for (int i = 0; i < ip4.length; i++) {
             System.out.println("www.google.com: " + ip4[i].getHostAddress());
         }
