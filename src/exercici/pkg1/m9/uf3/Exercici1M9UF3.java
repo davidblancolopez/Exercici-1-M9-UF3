@@ -51,6 +51,8 @@ public class Exercici1M9UF3 {
             //com cal.
             byte[] mac = network.getHardwareAddress();
 
+            System.out.println();
+            
             System.out.print("Direcció MAC : ");
 
             //Es crea una cadena on anirem posant la direcció MAC donant el format correcte a l'array mac. 
@@ -63,6 +65,8 @@ public class Exercici1M9UF3 {
             }
             //S'imprimeix la cadena amb la MAC formatada.
             System.out.println(cadenaDireccioMAC.toString());
+            
+            System.out.println();
 
         } catch (SocketException e) {
             System.out.println(e);
@@ -97,7 +101,7 @@ public class Exercici1M9UF3 {
         ip4 = InetAddress.getAllByName("www.google.com");
         
         for (int i = 0; i < ip4.length; i++) {
-            System.out.println("www.google.com" + ip4[i].getHostAddress());
+            System.out.println("www.google.com: " + ip4[i].getHostAddress());
         }
     }
     
