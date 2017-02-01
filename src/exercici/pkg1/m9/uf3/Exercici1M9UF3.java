@@ -21,7 +21,11 @@ public class Exercici1M9UF3 {
             System.out.println("------------------");
             while (interfaces.hasMoreElements()) {
                 NetworkInterface interfaz = interfaces.nextElement();
+                
+                //Imprimim el nom de la interficie.
                 System.out.println("Interfaz: " + interfaz.getDisplayName());
+                
+                //Imprimim la direcció de la interficie.
                 Enumeration<InetAddress> direccion = interfaz.getInetAddresses();
                 while (direccion.hasMoreElements()) {
                     InetAddress ip = direccion.nextElement();
