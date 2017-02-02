@@ -102,14 +102,14 @@ public class Exercici1M9UF3 {
 
         //Mostrem la IP del domini www.formula1.com
         for (InetAddress ip3 : InetAddress.getAllByName("www.formula1.com")) {
-            System.out.println("www.formula1.com: " + ip3);
+            System.out.println(ip3);
         }
 
         
         //Mostrem les IP's de www.google.com
         System.out.println();
         for (InetAddress ip4 : InetAddress.getAllByName("www.google.com")) {
-            System.out.println("www.google.com: " + ip4);
+            System.out.println(ip4);
         }
     }
 
