@@ -19,15 +19,21 @@ public class Exercici1M9UF3 {
             Enumeration<NetworkInterface> interfaces = NetworkInterface.getNetworkInterfaces();
             System.out.println("------------------");
             while (interfaces.hasMoreElements()) {
+                
+                //Es captura la interficie actual
                 NetworkInterface interfaz = interfaces.nextElement();
                 
                 //Imprimim el nom de la interficie.
                 System.out.println("Interfaz: " + interfaz.getDisplayName());
                 
-                //Imprimim la direcció de la interficie.
+                //Llista on es guardara les direccions.
                 Enumeration<InetAddress> direccion = interfaz.getInetAddresses();
+                
+                
                 while (direccion.hasMoreElements()) {
+                    //Agafem la ip
                     InetAddress ip = direccion.nextElement();
+                    //Imprimim la IP
                     System.out.println(ip.getHostAddress());
                 }
                 System.out.println("------------------");
@@ -95,19 +101,15 @@ public class Exercici1M9UF3 {
         System.out.println();
 
         //Mostrem la IP del domini www.formula1.com
-        InetAddress ip3;
-        ip3 = InetAddress.getByName("www.formula1.com");
+        for (InetAddress ip3 : InetAddress.getAllByName("www.formula1.com")) {
+            System.out.println("www.formula1.com: " + ip3);
+        }
 
-        System.out.println("www.formula1.com: " + ip3.getHostAddress());
-
+        
         //Mostrem les IP's de www.google.com
-        InetAddress ip4[];
-        ip4 = InetAddress.getAllByName("www.google.com");
-
         System.out.println();
-
-        for (int i = 0; i < ip4.length; i++) {
-            System.out.println("www.google.com: " + ip4[i].getHostAddress());
+        for (InetAddress ip4 : InetAddress.getAllByName("www.google.com")) {
+            System.out.println("www.google.com: " + ip4);
         }
     }
 
